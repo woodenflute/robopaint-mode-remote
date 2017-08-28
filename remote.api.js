@@ -11,7 +11,7 @@ if (!robopaint.api) robopaint.api = {};
 // Global remote print state and storage variables
 robopaint.api.print = {
   enabled: true, // This allows for queueing without having the mode open
-  ready: false, // We still require operator interaction to enable readiness.
+  ready: true, // We still require operator interaction to enable readiness.
   queue: [], // Array of Objects for actual queue
   requestOptions: {}, // Requested print settings for a new print queue item
   settingsOverrideWhitelist: [
