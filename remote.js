@@ -16,7 +16,11 @@ var currentQueueID = 0;
 
 // This var mimics the api.ready var. As soon as the user says we're ready,
 // we'll enable the API and items can processed.
+<<<<<<< HEAD
 var readyToPrint = false;
+=======
+var readyToPrint = true;
+>>>>>>> 03b5b0a3959e713a03085bb0ffc6b1ec9b617310
 
 // If True (set by checkbox), the readiness above will not be reset when a
 // drawing is complete and the next item in the queue will be processed
@@ -234,8 +238,8 @@ ipc.on('remoteprint', function(event, args) {
       }
       break;
   }
-
   //Todo: add cases here to mimic the controls in the mode api further down
+
 });
 
 // Catch the settings update so we're using the most up to date original Settings

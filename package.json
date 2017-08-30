@@ -38,6 +38,12 @@
     "type": "git",
     "url": "git+https://github.com/evil-mad/robopaint-mode-remote.git"
   },
+  "name": "robopaint-mode-remote",
+  "version": "1.1.1",
+  "robopaint-type": "mode",
+  "main": "remote.js",
+  "author": "techninja",
+  "license": "MIT",
   "robopaint": {
     "debug": true,
     "i18n": "native",
@@ -62,5 +68,9 @@
     ]
   },
   "robopaint-type": "mode",
-  "version": "1.1.1"
+  "version": "1.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evil-mad/robopaint-mode-remote.git"
+  }
 }
