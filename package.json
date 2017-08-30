@@ -21,9 +21,6 @@
   "_resolved": "git+https://github.com/woodenflute/robopaint-mode-remote.git#03b5b0a3959e713a03085bb0ffc6b1ec9b617310",
   "_spec": "robopaint-mode-remote@git+https://github.com/woodenflute/robopaint-mode-remote.git",
   "_where": "/home/mudi/Tink/robopaint",
-  "author": {
-    "name": "techninja"
-  },
   "bugs": {
     "url": "https://github.com/evil-mad/robopaint-mode-remote/issues"
   },
@@ -31,14 +28,11 @@
   "deprecated": false,
   "description": "Automatic Painting mode for use by external applications.",
   "homepage": "https://github.com/evil-mad/robopaint-mode-remote#readme",
-  "license": "MIT",
-  "main": "remote.js",
   "name": "robopaint-mode-remote",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evil-mad/robopaint-mode-remote.git"
   },
-  "name": "robopaint-mode-remote",
   "version": "1.1.1",
   "robopaint-type": "mode",
   "main": "remote.js",
@@ -66,11 +60,5 @@
     "persistentScripts": [
       "remote.api.js"
     ]
-  },
-  "robopaint-type": "mode",
-  "version": "1.1.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/evil-mad/robopaint-mode-remote.git"
   }
 }
