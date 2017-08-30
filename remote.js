@@ -16,7 +16,7 @@ var currentQueueID = 0;
 
 // This var mimics the api.ready var. As soon as the user says we're ready,
 // we'll enable the API and items can processed.
-var readyToPrint = false;
+var readyToPrint = true;
 
 // If True (set by checkbox), the readiness above will not be reset when a
 // drawing is complete and the next item in the queue will be processed

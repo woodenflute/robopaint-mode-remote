@@ -61,6 +61,7 @@ $(robopaint).on('subwindowReady', function(){
 
   // Bind for client messages
   window.$subwindow[0].addEventListener('ipc-message', function(event){
+    console.log(event.args);
     if (event.channel === 'remoteprint') {
       robopaint.api.print.fromMode.apply(undefined, event.args);
     }
@@ -169,11 +170,12 @@ robopaint.api.print.bindCreateEndpoints = function(){
 
       // Allow for the ready state to be forced (only works if the mode opened)
       if (!options && typeof req.body.ready !== 'undefined') {
+        console.log(appMode);
         if (appMode === 'remote') {
           robopaint.api.print.pushToMode('forceReady', !!req.body.ready);
           return [200, robopaint.t('modes.remote.api.readyset', {state: !!req.body.ready})];
         } else {
-          return [503, robopaint.t('modes.remote.api.readyfail')];
+          return [503, appMode];
         }
       }
 
@@ -244,15 +246,20 @@ robopaint.api.print.bindCreateEndpoints = function(){
 
     if (req.route.method == 'get') { // Is this a GET request?
       return {code: 200, body: item};
-    } else if (req.route.method == 'delete'){
-      if (item.status == "waiting" || item.status == "printing") {
-        item.status = 'cancelled';
-        robopaint.api.print.queueItemComplete(item);
-        robopaint.api.print.pushToMode('itemCancelled', qid);
-        return {code: 200, body: robopaint.api.print.queue[qid]};
-      } else {
-        return [406, "Queue item in state '" + item.status + "' cannot be cancelled"];
-      }
+    } else if (req.route.method == 'delete') {
+        if (item.status == "waiting" || item.status == "printing") {
+            item.status = 'cancelled';
+            robopaint.api.print.queueItemComplete(item);
+            robopaint.api.print.pushToMode('itemCancelled', qid);
+            return {code: 200, body: robopaint.api.print.queue[qid]};
+        } else {
+            return [406, "Queue item in state '" + item.status + "' cannot be cancelled"];
+        }
+    } else if (req.route.method == 'post') {
+      item.status = 'printing';
+      robopaint.api.print.processQueueItem(req.params.qid);
+
+      return {code: 200, body: item};
     } else {
       return false; // 405 - Method Not Supported
     }
