@@ -1,0 +1,66 @@
+{
+  "_from": "git+https://github.com/woodenflute/robopaint-mode-remote.git",
+  "_id": "robopaint-mode-remote@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha1-x3REstVOxhrD0ph8Ya1AUD7hEuk=",
+  "_location": "/robopaint-mode-remote",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "robopaint-mode-remote@git+https://github.com/woodenflute/robopaint-mode-remote.git",
+    "name": "robopaint-mode-remote",
+    "escapedName": "robopaint-mode-remote",
+    "rawSpec": "git+https://github.com/woodenflute/robopaint-mode-remote.git",
+    "saveSpec": "git+https://github.com/woodenflute/robopaint-mode-remote.git",
+    "fetchSpec": "https://github.com/woodenflute/robopaint-mode-remote.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/woodenflute/robopaint-mode-remote.git#03b5b0a3959e713a03085bb0ffc6b1ec9b617310",
+  "_spec": "robopaint-mode-remote@git+https://github.com/woodenflute/robopaint-mode-remote.git",
+  "_where": "/home/mudi/Tink/robopaint",
+  "author": {
+    "name": "techninja"
+  },
+  "bugs": {
+    "url": "https://github.com/evil-mad/robopaint-mode-remote/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Automatic Painting mode for use by external applications.",
+  "homepage": "https://github.com/evil-mad/robopaint-mode-remote#readme",
+  "license": "MIT",
+  "main": "remote.js",
+  "name": "robopaint-mode-remote",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evil-mad/robopaint-mode-remote.git"
+  },
+  "robopaint": {
+    "debug": true,
+    "i18n": "native",
+    "index": "remote.html",
+    "name": "remote",
+    "opensvg": false,
+    "weight": 5,
+    "dependencies": [
+      "paper",
+      "jquery",
+      "underscore",
+      "mediasets"
+    ],
+    "graphics": {
+      "icon": "images/remote_icon.svg",
+      "previews": [
+        "images/remote_preview_1.png"
+      ]
+    },
+    "persistentScripts": [
+      "remote.api.js"
+    ]
+  },
+  "robopaint-type": "mode",
+  "version": "1.1.1"
+}

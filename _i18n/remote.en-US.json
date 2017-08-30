@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "creator": "techninja",
+    "target": "en-US",
+    "release": "0.9.5",
+    "basetype": "mode"
+  },
+  "info":{
+    "name": "Remote Print Management",
+    "use": "Manage Remote Printing",
+    "detail": "Properly configured remote applications can send graphics to RoboPaint for automatic printing, only with this mode open can they be run."
+  },
+  "control": {
+    "title": "Remote Paint Control",
+    "subtitle": "Control"
+  },
+  "api": {
+    "disabled": "The SVG import API is currently disabled. Enable it in settings and then click the button in the RoboPaint GUI.",
+    "busy": "Cannot add to queue during ongoing print job.",
+    "queued": "Queued for printing...",
+    "wait": "Waiting for design from client...",
+    "readyset": "Ready state set to: __state__",
+    "readyfail": "Ready state not set, Mode not open or available"
+  },
+  "queue": {
+    "title": "Remote Paint Queue",
+    "name": "Name",
+    "status": "Status",
+    "added": "Timestamp",
+    "preview": "Preview",
+    "settings": "Settings",
+    "na": "None Given",
+    "itemStatus": {
+      "waiting": "Waiting",
+      "cancelled": "Cancelled",
+      "complete": "Complete",
+      "printing": "Printing"
+    }
+  },
+  "button": {
+    "ready": "Ready to print?",
+    "readytitle": "Enable this when you're ready to start processing the print queue.",
+    "noreset": "Don't reset readiness",
+    "noresettitle": "If enabled, readiness checkbox above will not be reset after a print, allows for immediate queue processing."
+  },
+  "status": {
+    "cancelled": "Remote printing spooling and printing cancelled."
+  }
+}
