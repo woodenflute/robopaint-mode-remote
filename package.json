@@ -60,5 +60,8 @@
     "persistentScripts": [
       "remote.api.js"
     ]
+  },
+  "dependencies": {
+    "i18next-client": "^1.11.4"
   }
 }

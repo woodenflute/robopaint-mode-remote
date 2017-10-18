@@ -5,6 +5,7 @@
 
 var actualPen = {}; // Hold onto the latest actualPen object from updates.
 var buffer = {};
+var i18n = require('i18next-client');
 var t = i18n.t; // The mother of all shortcuts
 var canvas = rpRequire('canvas');
 var originalSettings = {}; // Store the settings we came in with to revert to.

@@ -228,6 +228,8 @@ robopaint.api.print.bindCreateEndpoints = function(){
                 queue.pop();
             }
 
+            robopaint.api.print.pushToMode('fullQueue', robopaint.api.print.queue);
+
             // Return response to client application
             return {code: 200, body: {
               status: robopaint.api.print.enabled,
